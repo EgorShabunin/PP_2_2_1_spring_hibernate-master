@@ -20,7 +20,8 @@ public class User {
    @Column(name = "email")
    private String email;
 
-   @OneToOne(cascade = CascadeType.ALL)
+   @OneToOne
+   @MapsId
    @JoinColumn(name = "car_id")
    private Car car;
 
@@ -65,9 +66,7 @@ public class User {
       this.email = email;
    }
 
-   public Car getCar() {
-      return car;
-   }
+   public Car getCar() { return car; }
 
    public void setCar(Car car) {
       this.car = car;
