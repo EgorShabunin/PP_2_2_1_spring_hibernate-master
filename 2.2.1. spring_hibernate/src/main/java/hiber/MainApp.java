@@ -25,6 +25,7 @@ public class MainApp {
             System.out.println("car_id = " + user.getCar().getModel() + " " + user.getCar().getSeries());
             System.out.println();
         }
+        System.out.println(userService.getUserByCarModelAndSeries("Lada", 5));
         context.close();
     }
 }
